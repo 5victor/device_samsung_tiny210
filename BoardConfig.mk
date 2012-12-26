@@ -34,6 +34,8 @@ ARCH_ARM_HAVE_TLS_REGISTER := true
 
 TARGET_NO_BOOTLOADER := true
 
+TARGET_NO_KERNEL := true
+
 BOARD_KERNEL_BASE := 0x80000000
 
 TARGET_NO_RADIOIMAGE := true
@@ -41,8 +43,8 @@ TARGET_NO_RADIOIMAGE := true
 
 BOARD_EGL_CFG := device/samsung/tiny210/egl.cfg
 
-#BOARD_USES_HGL := true
-#BOARD_USES_OVERLAY := true
+BOARD_USES_HGL := true
+BOARD_USES_OVERLAY := true
 USE_OPENGL_RENDERER := true
 
 # set if the target supports FBIO_WAITFORVSYNC

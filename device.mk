@@ -22,7 +22,17 @@ DEVICE_PACKAGE_OVERLAYS := device/samsung/tiny210/overlay
 
 # These are the hardware-specific features
 PRODUCT_COPY_FILES := \
-	frameworks/native/data/etc/android.hardware.telephony.gsm.xml:system/etc/permissions/android.hardware.telephony.gsm.xml
+	frameworks/native/data/etc/android.hardware.telephony.gsm.xml:system/etc/permissions/android.hardware.telephony.gsm.xml \
+	device/samsung/tiny210/init.rc:root/init.rc \
+	device/samsung/tiny210/init.mini210.rc:root/init.mini210.rc\
+	device/samsung/tiny210/ueventd.mini210.rc:root/ueventd.mini210.rc \
+	device/samsung/tiny210/ft5x0x_ts.idc:system/usr/idc/ft5x0x_ts.idc
+
+PRODUCT_PROPERTY_OVERRIDES := \
+	ro.sf.auto_lcd_density=yes \
+	ro.sf.lcd_density=120
+
+PRODUCT_CHARACTERISTICS := nosdcard
 
 #$(call inherit-product, device/samsung/tuna/device.mk)
 $(call inherit-product-if-exists, vendor/samsung/tiny210/device-vendor.mk)
