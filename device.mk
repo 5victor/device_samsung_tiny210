@@ -36,3 +36,5 @@ PRODUCT_CHARACTERISTICS := nosdcard
 
 #$(call inherit-product, device/samsung/tuna/device.mk)
 $(call inherit-product-if-exists, vendor/samsung/tiny210/device-vendor.mk)
+
+$(call inherit-product, device/samsung/tiny210/hwopengl.mk)
