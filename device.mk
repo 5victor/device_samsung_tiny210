@@ -26,11 +26,18 @@ PRODUCT_COPY_FILES := \
 	device/samsung/tiny210/init.rc:root/init.rc \
 	device/samsung/tiny210/init.mini210.rc:root/init.mini210.rc\
 	device/samsung/tiny210/ueventd.mini210.rc:root/ueventd.mini210.rc \
+	device/samsung/tiny210/vold.fstab:system/etc/vold.fstab \
 	device/samsung/tiny210/ft5x0x_ts.idc:system/usr/idc/ft5x0x_ts.idc
 
 PRODUCT_PROPERTY_OVERRIDES := \
 	ro.sf.auto_lcd_density=yes \
 	ro.sf.lcd_density=120
+
+PRODUCT_PACKAGES += \
+	audio.primary.mini210 \
+	tinyplay \
+	tinycap \
+	tinymix
 
 PRODUCT_CHARACTERISTICS := nosdcard
 
